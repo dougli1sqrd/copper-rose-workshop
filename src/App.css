@@ -1,8 +1,52 @@
-html {
-  color-scheme: light dark;
-  font-family: system-ui;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+@import "./styles.css";
+
+@theme {
+    --color-secondary: #206060;
 }
+
+@layer base {
+    h1 {
+        @apply text-3xl;
+    }
+    h2 {
+        @apply text-2xl;
+    }
+    h3 {
+        @apply text-xl;
+    }
+    p {
+        @apply mt-4.5 mb-4.5 text-lg font-[Georgia] font-medium text-amber-100 tracking-normal;
+    }
+    ul {
+        @apply list-image-[url(./assets/hexagon-line.svg)] text-lg/[32px] font-[Georgia] font-medium text-amber-100 tracking-normal;
+    }
+    ol {
+        @apply list-inside list-decimal text-lg/[32px] font-[Georgia] font-medium text-amber-100 tracking-normal
+    }
+    li {
+        @apply ml-2 mt-3.5 mb-3.5;
+    }
+    a {
+        @apply underline font-bold text-rose-300 hover:drop-shadow-md hover:drop-shadow-rose-300
+    }
+}
+
+/* background-color: #3d1879; */
+html {
+    color-scheme: light dark;
+    font-family: system-ui;
+    color: #fffade;
+    @apply bg-indigo-950;
+    display: flex;
+    height: 100%;
+}
+
+
+input[type="number"] {
+    @apply bg-amber-50
+}
+
+input[type="button"] {
+    @apply border border-b-orange-300 shadow shadow-orange-300
+}
+
