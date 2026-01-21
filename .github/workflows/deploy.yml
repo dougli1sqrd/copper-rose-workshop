@@ -15,7 +15,7 @@ jobs:
     - name: Build the site
       run: |
         cd "${{ github.workspace }}"
-        sudo docker run --rm --init -u $(id -u):$(id -g) -v .:/copper node /bin/bash -c "cd /copper && yarn build"
+        sudo docker run --rm --init -u $(id -u):$(id -g) -v .:/copper node /bin/bash -c "cd /copper && yarn install && yarn build"
     - name: Show Contents
       run: |
         echo ${{ github.workspace }}
