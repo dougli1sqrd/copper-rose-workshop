@@ -1,8 +1,9 @@
+import { SITE_ROOT } from "../Config"
 import { CopperRose } from "./copper-rose"
 
 export const Title = () => {
     return (
-        <a href="/" className="no-underline drop-shadow-none">
+        <a href={`${SITE_ROOT}`} className="no-underline drop-shadow-none">
             <div className="flex flex-row">
                 <div className="flex-1/3 mr-2 drop-shadow-lg drop-shadow-amber-300">
                     <CopperRose />

@@ -4,16 +4,32 @@
   "version": "0.0.0",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "clean": "rm -rf dist/*",
+    "start": "parcel serve --public-url /astro-medallion/ --watch-dir .",
+    "build": "parcel build --public-url /astro-medallion/"
   },
   "dependencies": {
+    "@remixicon/react": "^4.7.0",
+    "@uidotdev/usehooks": "^2.4.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-alice-carousel": "^2.9.1",
+    "react-dom": "^19.1.0",
+    "react-svg": "^16.3.0"
   },
   "devDependencies": {
+    "@parcel/transformer-svg-jsx": "^2.16.3",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "parcel": "^2.14.0"
+    "@types/react-image-gallery": "^1.2.4",
+    "eslint": "^9.39.2",
+    "parcel": "^2.14.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "parcel-transformer-mdx": "^0.4.2",
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4",
+    "prettier-eslint": "^16.4.2",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.1.18"
   }
 }
