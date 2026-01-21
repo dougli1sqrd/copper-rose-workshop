@@ -1,0 +1,35 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches:
+        - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site
+      run: |
+        cd "${{ github.workspace }}"
+        sudo docker run --rm --init -u $(id -u):$(id -g) -v .:/copper node /bin/bash -c "cd /copper && yarn build"
+    - name: Show Contents
+      run: |
+        echo ${{ github.workspace }}
+        ls -l ${{ github.workspace }}/dist
+
+    - name: Deploy to server
+      id: deploy
+      uses: Pendect/action-rsyncer@v1.1.0
+      env:
+        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+      with:
+        flags: '-avr --delete'
+        options: ''
+        ssh_options: '-p 22010'
+        src: './dist/'
+        dest: 'ericoff@web.electricembers.net:/home/ericoff/copperrose_html/astro-medallion/'
+
