@@ -13,15 +13,14 @@ import {
     RiInstagramLine,
 } from "@remixicon/react"
 import { Title } from "./components/title"
-import { EcwidButton } from "./components/ecwid-button"
-import { StripeBuy } from "./components/stripe-buy"
+import { EtsyBuy } from "./components/stripe-buy"
 import { HexGlow } from "./components/hex-glow"
 import { NavBar } from "./components/nav-bar"
 
 const items = [
-    <img src="astro-medallion/PXL_20251121_165222077.PORTRAIT.jpg" />,
-    <img src="astro-medallion/PXL_20251121_165206066.PORTRAIT.jpg" />,
-    <img src="astro-medallion/PXL_20251121_165412159.PORTRAIT.jpg" />,
+    <img src="astro-medallion/PXL_20260426_011343328.PORTRAIT.jpg" />,
+    <img src="astro-medallion/PXL_20260426_012251496.PORTRAIT.jpg" />,
+    <img src="astro-medallion/PXL_20260416_214902397.PORTRAIT-landscape.jpg" />,
     <img src="astro-medallion/PXL_20251121_165541186.PORTRAIT.jpg" />,
     <video
         autoPlay
@@ -63,7 +62,7 @@ export function App() {
                     </div>
                     <div className="md:basis-5/12 ml-4">
                         <Brief />
-                        <StripeBuy className=""/>
+                        <EtsyBuy className=""/>
                     </div>
                 </div>
                 <div
