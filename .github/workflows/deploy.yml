@@ -12,10 +12,22 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the site
-      run: |
-        cd "${{ github.workspace }}"
-        sudo docker run --rm --init -u $(id -u):$(id -g) -v .:/copper node /bin/bash -c "sudo chown -R 1001:1001 "/.npm" && sudo npm install -g yarn && cd /copper && yarn install && yarn build"
+    - name: Set Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 26.x
+    - name: Run install
+      uses: borales/actions-yarn@v4
+      with:
+        cmd: install # will run `yarn install` command
+    - name: Build production bundle
+      uses: borales/actions-yarn@v4
+      with:
+        cmd: build # will run `yarn build` command
+    # - name: Build the site
+    #   run: |
+    #     cd "${{ github.workspace }}"
+    #     sudo docker run --rm --init -u $(id -u):$(id -g) -v .:/copper node /bin/bash -c "sudo chown -R 1001:1001 "/.npm" && sudo npm install -g yarn && cd /copper && yarn install && yarn build"
     - name: Show Contents
       run: |
         echo ${{ github.workspace }}
