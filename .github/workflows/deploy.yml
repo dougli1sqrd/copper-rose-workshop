@@ -43,5 +43,5 @@ jobs:
         options: ''
         ssh_options: '-p 22010'
         src: './dist/'
-        dest: 'ericoff@web.electricembers.net:/home/ericoff/copperrose_html/astro-medallion/'
+        dest: 'ericoff@web.electricembers.net:/home/ericoff/copperrose_html/'
 
