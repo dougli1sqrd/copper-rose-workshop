@@ -6,22 +6,19 @@
 
 @layer base {
     h1 {
-        @apply text-3xl;
+        @apply text-3xl font-bold m-1 text-zinc-200;
     }
     h2 {
-        @apply text-2xl;
+        @apply text-2xl font-bold m-1.5 text-zinc-200;
     }
     h3 {
-        @apply text-xl;
-    }
-    hr {
-        @apply m-6;
+        @apply text-xl font-bold m-1 text-zinc-200;
     }
     p {
-        @apply mt-4.5 mb-4.5 text-lg font-[Georgia] font-medium text-amber-100 tracking-normal;
+        @apply mt-4.5 mb-4.5 text-lg/loose font-[Georgia] font-medium text-amber-100 tracking-wide [word-spacing:3px];
     }
     ul {
-        @apply list-image-[url(./assets/hexagon-line.svg)] text-lg/[32px] font-[Georgia] font-medium text-amber-100 tracking-normal;
+        @apply list-disc text-lg/[32px] font-[Georgia] font-medium text-amber-100 tracking-normal;
     }
     ol {
         @apply list-inside list-decimal text-lg/[32px] font-[Georgia] font-medium text-amber-100 tracking-normal
@@ -39,7 +36,7 @@ html {
     color-scheme: light dark;
     font-family: system-ui;
     color: #fffade;
-    @apply bg-indigo-950;
+    @apply bg-emerald-950;
     display: flex;
     height: 100%;
 }

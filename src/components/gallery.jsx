@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const Gallery = ({ items = [] }) => {
+export const Gallery = ({ items = [], className = "" }) => {
     const [imgState, setImgState] = useState({
         current: 0,
         next: 0,
@@ -8,7 +8,7 @@ export const Gallery = ({ items = [] }) => {
     const [state, setState] = useState(STATIC)
 
     return (
-        <div className="w-12/12 border-2 rounded-lg">
+      <div className={`w-12/12 border-2 rounded-lg ${className}`}>
             {items.length > 0 ? (
                 <GalleryMain
                     item={items[imgState.current]}

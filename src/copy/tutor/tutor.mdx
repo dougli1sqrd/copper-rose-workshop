@@ -1,0 +1,95 @@
+import { Gallery } from "../../components/gallery"
+import { Caption } from "../../components/caption"
+import { ContactButton } from "../../components/contact-button"
+
+# San Francisco based Science and Math Tutor
+
+🪐 Eric Douglass
+
+🪐 Tutoring for test prep, schoolwork, and homework, emphasizing comprehension and prior knowledge
+
+## Contact
+
+<ContactButton/>
+
+<hr className="mt-4 mb-4"/>
+
+export const profileCaption = (
+    <>
+        <div className="text-base text-amber-50">
+            Me in and around the Bay Area and projecting the sun during the
+            solar eclipse!
+        </div>
+    </>
+)
+
+<Caption className="w-full md:w-4/12 float-left m-2 pr-4" caption={profileCaption}>
+    <Gallery
+        items={[
+            <img src="./profile-01.jpg" />,
+            <img src="./profile-03.jpg" />,
+            <img src="./profile-02.jpg" />,
+            <img src="./profile-04.jpg" />,
+            <img src="./profile-05.jpg" />,
+            <img src="./profile-06.jpg" />,
+            <img src="./profile-07.jpg" />,
+            <img src="./profile-08.jpg" />,
+        ]}
+    />
+</Caption>
+
+## Subjects
+
+- Math: Basics, Algebra, Pre-calculus, Calculus
+- Physics
+- Electronics: Circuits, Circuit design, soldering
+- Computer science: Programming, web design
+- Earth/Space science
+- Chemistry
+- SAT prep
+- General study help
+
+## About Me
+
+I've been tutoring for over year professionally at C2 Education. I meet the kids where they're at and build understanding to bridge any gaps and help them feel confident. I feel like a lot of kids often have at least a partial understanding of something but what they really need is the confidence to try out and use the knowledge that's in there. They often don't realize what they know! So I also see a lot of my job as teaching them confidence in their own abilities and to do research on their own. I've seen my students grow in their abilities and confidence!
+
+I became a tutor after being laid off from my tech job followed by some soul searching. I've found that I really love teaching and this has felt much more fulfilling than tech did for quite some time!
+
+export const projectCaption = (
+    <>
+        <div className="text-base text-amber-50">
+            Nerdy projects I've worked on in the past few years
+        </div>
+    </>
+)
+
+<Caption className="w-full md:w-5/12 float-right m-2" caption={projectCaption}>
+    <Gallery
+        items={[
+            <img src="./project-07.jpg" />,
+            <img src="./project-01.jpg" />,
+            <img src="./project-03.jpg" />,
+            <img src="./project-02.jpg" />,
+            <img src="./project-04.jpg" />,
+            <img src="./project-05.jpg" />,
+            <img src="./project-06.jpg" />,
+        ]}
+    />
+</Caption>
+
+I went to Lewis and Clark college in Portland and I majored in physics. I've always loved science and math. After graduating I got a job in tech doing programming. I moved to SF for a different tech job and I've been here ever since. I mostly worked in academic settings, doing various software jobs for research groups. For the last few years I've been getting into and learning electronics and I've made several projects. It's been exciting to continue to learn new things! I've built a LED string lights controller, a [VGA monitor controller and hardware terminal](https://github.com/rustbox/esp32c3-vgaterm), and a [planetary location clock](https://copperrose.work/astro-medallion/).
+
+## Next Steps
+
+If you're interested in me being your tutor, let me know!
+
+<ContactButton/>
+
+1. Contact me with some information about your tutoring needs.
+2. We'll schedule an initial free, 30-minute session for parents and students to meet me and discuss future sessions, any initial instructing materials, and further goals.
+3. Session Costs:
+    * $45 per hour, in 15 minute increments (minimum 45 minutes)
+    * $80 for 2 hours (5 minute break at the hour)
+    * $38 per hour for recurring schedule!
+
+Please cancel at least 24 hours before the session to receive a refund.

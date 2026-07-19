@@ -5,8 +5,8 @@
   "source": "src/index.html",
   "scripts": {
     "clean": "rm -rf dist/*",
-    "start": "parcel serve --public-url /astro-medallion/ --watch-dir .",
-    "build": "parcel build --public-url /astro-medallion/"
+    "start": "parcel serve --watch-dir . ./src/astro-medallion/index.html ./src/tutor/index.html ./src/index.html",
+    "build": "parcel build ./src/astro-medallion/index.html ./src/tutor/index.html ./src/index.html"
   },
   "dependencies": {
     "@remixicon/react": "^4.7.0",

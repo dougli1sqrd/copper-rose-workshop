@@ -1,32 +1,31 @@
-import "./App.css"
-import Description from "./copy/astro-medallion/desc-short.mdx"
-import Brief from "./copy/astro-medallion/brief.mdx"
-import Sunrise from "./copy/astro-medallion/sunrise-sunset.mdx"
-import Moon from "./copy/astro-medallion/moon-phase.mdx"
-import Sun from "./copy/astro-medallion/sun.mdx"
-import Assembly from "./copy/astro-medallion/assembly.mdx"
-import { Gallery } from "./components/gallery"
+import "../App.css"
+import Description from "../copy/astro-medallion/desc-short.mdx"
+import Brief from "../copy/astro-medallion/brief.mdx"
+import Sunrise from "../copy/astro-medallion/sunrise-sunset.mdx"
+import Moon from "../copy/astro-medallion/moon-phase.mdx"
+import Sun from "../copy/astro-medallion/sun.mdx"
+import Assembly from "../copy/astro-medallion/assembly.mdx"
+import { Gallery } from "../components/gallery"
 import {
     RiGiftLine,
     RiGithubFill,
-    RiInstagramFill,
     RiInstagramLine,
 } from "@remixicon/react"
-import { Title } from "./components/title"
-import { EtsyBuy } from "./components/stripe-buy"
-import { HexGlow } from "./components/hex-glow"
-import { NavBar } from "./components/nav-bar"
+import { Title } from "../components/title"
+import { EtsyBuy } from "../components/stripe-buy"
+import { HexGlow } from "../components/hex-glow"
+import { NavBar } from "../components/nav-bar"
 
 const items = [
-    <img src="astro-medallion/PXL_20260426_011343328.PORTRAIT.jpg" />,
-    <img src="astro-medallion/PXL_20260426_012251496.PORTRAIT.jpg" />,
-    <img src="astro-medallion/PXL_20260416_214902397.PORTRAIT-landscape.jpg" />,
-    <img src="astro-medallion/PXL_20251121_165541186.PORTRAIT.jpg" />,
+    <img src="PXL_20260426_011343328.PORTRAIT.jpg" />,
+    <img src="PXL_20260426_012251496.PORTRAIT.jpg" />,
+    <img src="PXL_20260416_214902397.PORTRAIT-landscape.jpg" />,
+    <img src="PXL_20251121_165541186.PORTRAIT.jpg" />,
     <video
         autoPlay
         muted
         loop
-        src="astro-medallion/PXL_20251118_203009175.mp4"
+        src="PXL_20251118_203009175.mp4"
     />,
 ]
 
